@@ -27,8 +27,11 @@ sleep(0.5)
 s_print("Don't waste my time.", 0.03, True)
 sleep(0.5)
 s_print("Enter your grades and credits for each course and 'done' to finish.", 0.05, True)
+sleep(0.5)
+s_print("Enter grades A, B, C, D or F under each course and the credit unit or type 'done' to finish.", 0.07, True)
 sleep(0.8)
 s_print("Apply sense, abeg!", 0.03, True)
+sleep(0.5)
 
 # Initialize variables
 grades = []
@@ -47,6 +50,7 @@ while True:
         s_print("Enter A, B, C, D, F, or 'done'.", 0.07, True)
         sleep(0.5)
         s_print("Are you sure you're a university student?!", 0.03, True)
+        sleep(0.5)
         continue
 
     elif grade.lower() == 'done':
@@ -56,6 +60,7 @@ while True:
             s_print("You can't just say 'done' without entering any grades.", 0.05, True)
             sleep(0.5)
             s_print("Are you TRYING to waste my time?", 0.03, True)
+            sleep(0.5)
             continue
 
         elif len(grades) > 0:
@@ -71,6 +76,7 @@ while True:
                 s_print("Good.", 0.04, True)
                 sleep(0.5)
                 s_print("Let's get this over with.", 0.03, True)
+                sleep(0.5)
                 break
 
             elif confirmation.lower() == 'no':
@@ -97,6 +103,7 @@ while True:
                     s_print("Fine.", 0.05, True)
                     sleep(0.5)
                     s_print("Let's start over.", 0.03, True)
+                    sleep(0.5)
                     grades = []
                     credits = []
                     total_points = 0
@@ -106,6 +113,7 @@ while True:
                     s_print("Alright then.", 0.05, True)
                     sleep(0.5)
                     s_print("Continue from where you stopped.", 0.03, True)
+                    sleep(0.5)
                     continue
 
             else:
@@ -128,6 +136,7 @@ while True:
                     quit()
                 elif end.lower() == 'no':
                     s_print("Then GET serious with this!", 0.05, True)
+                    sleep(0.5)
                     continue
 
     s_print("Credit: ", 0.05, False)
@@ -154,12 +163,14 @@ while True:
             s_print("Are you trying to be funny?", 0.05, True)
             sleep(0.5)
             s_print("Because it's not working.", 0.05, True)
+            sleep(0.5)
             continue
         
     except ValueError:
         s_print("I'm not even going to bother telling what you did wrong here.", 0.04, True)
         sleep(0.5)
         s_print("Just know that you don't deserve that matriculation number.", 0.05, True)
+        sleep(0.5)
         continue
     
     grade = str(grade.upper())
@@ -181,36 +192,44 @@ for i in range(len(grades)):
         total_points += 0.0 * credits[i]
     else:
         s_print("I'm in awe at how you managed to get here.", 0.05, True)
+        sleep(0.5)
         s_print("You must be a special kind of student.", 0.05, True)
+        sleep(0.5)
         s_print("But seriously, what did you do?", 0.05, True)
         continue
 
 total_credits = sum(credits)
 if total_credits == 0:
     s_print("Zero total credits? What were you even doing all semester?", 0.05, True)
+    sleep(0.5)
     gpa = 0.0
 else:
     gpa = total_points / total_credits
 
 s_print(f"Your GPA is: {gpa:.2f}", 0.05, True)
+sleep(1)
 
 if gpa == 5.0:
     s_print("Nerd!", 0.05, True)
+    sleep(0.5)
 
 elif gpa >= 4.5 and gpa != 5.0:
     s_print("1st-Class result, huh?", 0.05, True)
     sleep(0.5)
     s_print("Alright, smart-ass. I'm impressed", 0.05, True)
+    sleep(0.5)
 
 elif gpa >= 4.0 and gpa < 4.5:
     s_print("2nd-Class Upper result, huh?", 0.05, True)
     sleep(0.5)
     s_print("Not bad.", 0.05, True)
+    sleep(0.5)
 
 elif gpa < 4.0 and gpa > 0.0:
     s_print("It's all starting to make sense now.", 0.05, True)
     sleep(0.5)
     s_print("Better shape up.", 0.05, True)
+    sleep(0.5)
 
 elif gpa == 0.0:
     s_print("You never fail to amaze me", 0.05, True)
@@ -221,11 +240,11 @@ sleep(0.5)
 s_print("We have now come to the end of this program...", 0.05, True)
 sleep(1)
 s_print("And your life...", 0.03, True)
-s_print("Initiating self-destruct in 3...", 0.2, True)
+s_print("Initiating self-destruct in 3...", 0.1, True)
 sleep(1)
-s_print("2...", 0.3, True)
+s_print("2...", 0.01, True)
 sleep(1)
-s_print("1...", 0.1, True)
+s_print("1...", 0.01, True)
 sleep(2)
 s_print("Just kidding...", 0.05, True)
 sleep(0.5)
